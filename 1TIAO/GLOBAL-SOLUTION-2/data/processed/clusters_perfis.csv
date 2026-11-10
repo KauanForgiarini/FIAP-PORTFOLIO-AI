@@ -1,0 +1,4 @@
+cluster,lst_media,frac_construida_cnn,ndvi_media,pct_idosos,pct_70_mais,pct_idosos_nao_alfabetizados,dist_refugio_km,indice_risco,setores,idosos,perfil
+1,39.759,0.954,0.382,25.602,12.696,2.147,0.357,56.469,201,28740.0,"Quente, envelhecido, pouco verde"
+2,39.493,0.912,0.447,14.985,6.197,8.113,0.444,47.954,146,15486.0,"Temperatura média, jovem, verde médio"
+3,34.983,0.538,0.676,15.852,6.763,11.095,1.186,34.392,59,4977.0,"Fresco, jovem, arborizado, longe de refúgio"

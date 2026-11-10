@@ -1,0 +1,5 @@
+desfecho,rotulo,marcador,dias,observado,esperado,excesso,rr,ic_inf,ic_sup
+obitos_idosos,Óbitos de idosos (todas as causas),dia_quente_abs,65,396,347.15,48.85000000000002,1.140717269191992,1.0365179967452696,1.2436905791366204
+obitos_idosos_sensivel_calor,Óbitos de idosos (causas sensíveis ao calor),dia_quente_abs,65,163,141.8,21.19999999999999,1.14950634696756,0.987975737196921,1.3088460951945258
+internacoes_idosos,Internações de idosos (todas as causas),dia_quente_abs,71,823,862.3,-39.299999999999955,0.9544242143105648,0.8963425913783453,1.01355216073752
+internacoes_idosos_sensivel_calor,Internações de idosos (causas sensíveis ao calor),dia_quente_abs,71,278,275.0,3.0,1.010909090909091,0.9131650381449886,1.11032311778787

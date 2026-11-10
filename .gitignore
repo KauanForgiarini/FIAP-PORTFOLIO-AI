@@ -1,0 +1,20 @@
+# Ambientes e caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Segredos (chaves de API, certificados AWS IoT)
+.env
+secrets.h
+*.pem
+*.key
+**/certs/
+
+# Downloads temporários
+*.part
+
+# Sistema
+.DS_Store
+Thumbs.db

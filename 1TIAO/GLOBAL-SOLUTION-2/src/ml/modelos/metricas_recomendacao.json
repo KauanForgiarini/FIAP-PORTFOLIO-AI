@@ -1,0 +1,56 @@
+{
+  "refugios": {
+    "dia_util_14h": {
+      "idosos_com_refugio_climatizado_aberto_ate_800m_%": 88.67345487063797,
+      "idosos_com_refugio_climatizado_aberto_ate_1500m_%": 97.93305286263033,
+      "distancia_media_ponderada_m": 461.5089688803566,
+      "baseline_mais_proximo_inadequado_ou_fechado_%": 49.69615673841026,
+      "refugios_climatizados_abertos": 87
+    },
+    "domingo_14h": {
+      "idosos_com_refugio_climatizado_aberto_ate_800m_%": 45.102940877588765,
+      "idosos_com_refugio_climatizado_aberto_ate_1500m_%": 66.47968619799606,
+      "distancia_media_ponderada_m": 1225.9758711195243,
+      "baseline_mais_proximo_inadequado_ou_fechado_%": 93.23415238908197,
+      "refugios_climatizados_abertos": 16
+    }
+  },
+  "plantio": {
+    "beta_C_por_unidade_ndvi": -13.274943351745605,
+    "resfriamento_por_0_1_ndvi_C": 1.3274943351745607,
+    "r2": 0.6060770153999329,
+    "ndvi_alvo_p75": 0.5234681665897369,
+    "top_k": 20,
+    "beneficio_capturado_top_k": {
+      "recomendador_plantio": 6338.78567814827,
+      "mais_quentes": 4279.841890335083,
+      "mais_idosos": 4993.332187414169,
+      "menos_verdes": 2830.218024253845,
+      "aleatorio_media_100x": 2129.8212934742496
+    },
+    "kendall_tau_estabilidade_min": 0.6415503653145188,
+    "kendall_tau_estabilidade_media": 0.7953170720793858
+  },
+  "pesos_refugio": {
+    "proximidade": 0.45,
+    "adequacao": 0.35,
+    "frescor": 0.2
+  },
+  "exemplos_personas": {
+    "Dona Maria, 78 anos, Tancredo Neves, quarta 14h, anda até 500 m, precisa de ar-condicionado": [
+      "Unidade Básica de Saúde Parque (saude) a 0.3 km, climatizado, aberto até 17h",
+      "Unidade Básica de Saúde Doutor Floriano Rocha (saude) a 0.7 km, climatizado, aberto até 17h",
+      "Estratégia Saúde da Família Roberto Binato (saude) a 0.8 km, climatizado, aberto até 17h"
+    ],
+    "Seu João, 82 anos, Centro, domingo 15h, anda até 800 m, precisa de ar-condicionado": [
+      "Shopping Independência (Camelódromo) (shopping) a 0.1 km, climatizado, aberto até 22h",
+      "Galerias Roth (shopping) a 0.2 km, climatizado, aberto até 22h",
+      "Santa Maria Shopping (shopping) a 0.3 km, climatizado, aberto até 22h"
+    ],
+    "Cuidadora de idoso com hipertensão, Camobi, sexta 10h, de carro (3 km), precisa de atendimento": [
+      "Unidade Básica de Saúde Wilson Paulo Noal (saude) a 0.2 km, climatizado, aberto até 17h",
+      "Unidade Básica de Saúde Walter Aita (saude) a 1.4 km, climatizado, aberto até 17h",
+      "Saúde Ocupacional (saude) a 1.4 km, climatizado, aberto até 17h"
+    ]
+  }
+}

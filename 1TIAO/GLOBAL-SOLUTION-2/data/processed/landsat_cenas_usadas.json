@@ -1,0 +1,135 @@
+[
+  {
+    "id": "LC08_L2SP_223081_20221211_02_T1",
+    "data": "2022-12-11",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 4.39,
+    "lst_media_C": 34.01093673706055
+  },
+  {
+    "id": "LC09_L2SP_223080_20230205_02_T1",
+    "data": "2023-02-05",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.77,
+    "lst_media_C": 30.617128372192383
+  },
+  {
+    "id": "LC08_L2SP_223081_20230213_02_T1",
+    "data": "2023-02-13",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 0.02,
+    "lst_media_C": 38.58913040161133
+  },
+  {
+    "id": "LC08_L2SP_223081_20231230_02_T1",
+    "data": "2023-12-30",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 5.99,
+    "lst_media_C": 27.643657684326172
+  },
+  {
+    "id": "LC08_L2SP_223080_20240115_02_T1",
+    "data": "2024-01-15",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 5.33,
+    "lst_media_C": 33.41671371459961
+  },
+  {
+    "id": "LC08_L2SP_223081_20240131_02_T1",
+    "data": "2024-01-31",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 0.0,
+    "lst_media_C": 33.60057067871094
+  },
+  {
+    "id": "LC09_L2SP_223080_20240208_02_T1",
+    "data": "2024-02-08",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.21,
+    "lst_media_C": 36.86542510986328
+  },
+  {
+    "id": "LC09_L2SP_223080_20240224_02_T1",
+    "data": "2024-02-24",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.65,
+    "lst_media_C": 35.82192611694336
+  },
+  {
+    "id": "LC09_L2SP_223080_20240311_02_T1",
+    "data": "2024-03-11",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.04,
+    "lst_media_C": 28.29201889038086
+  },
+  {
+    "id": "LC09_L2SP_223080_20240327_02_T1",
+    "data": "2024-03-27",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 6.97,
+    "lst_media_C": 26.57190704345703
+  },
+  {
+    "id": "LC08_L2SP_223081_20250101_02_T1",
+    "data": "2025-01-01",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 0.97,
+    "lst_media_C": 34.342960357666016
+  },
+  {
+    "id": "LC09_L2SP_223080_20250109_02_T1",
+    "data": "2025-01-09",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.2,
+    "lst_media_C": 33.78064727783203
+  },
+  {
+    "id": "LC08_L2SP_223081_20250117_02_T1",
+    "data": "2025-01-17",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 6.29,
+    "lst_media_C": 36.35425567626953
+  },
+  {
+    "id": "LC08_L2SP_223081_20250202_02_T1",
+    "data": "2025-02-02",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 0.37,
+    "lst_media_C": 35.45563507080078
+  },
+  {
+    "id": "LC09_L2SP_223080_20250210_02_T1",
+    "data": "2025-02-10",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.02,
+    "lst_media_C": 38.85307312011719
+  },
+  {
+    "id": "LC09_L2SP_223080_20250226_02_T1",
+    "data": "2025-02-26",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.01,
+    "lst_media_C": 35.9161262512207
+  },
+  {
+    "id": "LC08_L2SP_223081_20250306_02_T1",
+    "data": "2025-03-06",
+    "plataforma": "landsat-8",
+    "nuvens_cena_%": 0.06,
+    "lst_media_C": 35.77307891845703
+  },
+  {
+    "id": "LC09_L2SP_223081_20250314_02_T1",
+    "data": "2025-03-14",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 1.13,
+    "lst_media_C": 25.713525772094727
+  },
+  {
+    "id": "LC09_L2SP_223080_20250330_02_T1",
+    "data": "2025-03-30",
+    "plataforma": "landsat-9",
+    "nuvens_cena_%": 0.0,
+    "lst_media_C": 31.515472412109375
+  }
+]

@@ -1,0 +1,3 @@
+# Dados brutos são baixados pelos scripts (python -m src.data.baixar_dados)
+raw/
+*.part

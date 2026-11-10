@@ -1,0 +1,60 @@
+{
+  "k_escolhido": 3,
+  "avaliacao_k": [
+    {
+      "k": 3,
+      "silhueta": 0.292,
+      "davies_bouldin": 1.1761,
+      "inercia": 1395.7096
+    },
+    {
+      "k": 4,
+      "silhueta": 0.2892,
+      "davies_bouldin": 1.2969,
+      "inercia": 1264.6107
+    },
+    {
+      "k": 5,
+      "silhueta": 0.2749,
+      "davies_bouldin": 1.1396,
+      "inercia": 1142.5237
+    },
+    {
+      "k": 6,
+      "silhueta": 0.2141,
+      "davies_bouldin": 1.2096,
+      "inercia": 1016.9058
+    },
+    {
+      "k": 7,
+      "silhueta": 0.2258,
+      "davies_bouldin": 1.2543,
+      "inercia": 906.282
+    }
+  ],
+  "atributos": {
+    "lst_media": "Temperatura de superfície (°C)",
+    "frac_construida_cnn": "Área construída (CNN)",
+    "ndvi_media": "Vegetação (NDVI)",
+    "pct_idosos": "% idosos 60+",
+    "pct_70_mais": "% idosos 70+",
+    "pct_idosos_nao_alfabetizados": "% idosos não alfabetizados",
+    "dist_refugio_km": "Distância ao refúgio climatizado (km)"
+  },
+  "setores_imputados": 16,
+  "pesos_indice": {
+    "perigo": {
+      "lst": 0.7,
+      "construido_cnn": 0.3
+    },
+    "exposicao": {
+      "idosos_60_mais": 0.6,
+      "pct_70_mais": 0.4
+    },
+    "vulnerabilidade": {
+      "ndvi_invertido": 0.4,
+      "nao_alfabetizados": 0.3,
+      "dist_refugio": 0.3
+    }
+  }
+}

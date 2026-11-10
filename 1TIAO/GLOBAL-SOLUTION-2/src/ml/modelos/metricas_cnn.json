@@ -1,0 +1,322 @@
+{
+  "baseline_rf_histograma": {
+    "acuracia_teste": 0.8192592592592592,
+    "f1_macro_teste": 0.8089335856318509,
+    "acuracia_validacao": 0.8002469135802469,
+    "tempo_s": 33.79320502281189
+  },
+  "cnn_pequena": {
+    "acuracia_teste": 0.9538271604938272,
+    "f1_macro_teste": 0.9526084105809509,
+    "acuracia_validacao": 0.9469135802469136,
+    "parametros": 289194,
+    "tempo_s": 1698.784415960312,
+    "historico": [
+      {
+        "epoca": 1,
+        "perda_treino": 1.1949794800067075,
+        "acuracia_validacao": 0.6824691358024692
+      },
+      {
+        "epoca": 2,
+        "perda_treino": 0.8862345812434241,
+        "acuracia_validacao": 0.7353086419753087
+      },
+      {
+        "epoca": 3,
+        "perda_treino": 0.7462108315614165,
+        "acuracia_validacao": 0.8266666666666667
+      },
+      {
+        "epoca": 4,
+        "perda_treino": 0.6604944001934516,
+        "acuracia_validacao": 0.8782716049382716
+      },
+      {
+        "epoca": 5,
+        "perda_treino": 0.5799635132784566,
+        "acuracia_validacao": 0.9049382716049382
+      },
+      {
+        "epoca": 6,
+        "perda_treino": 0.5302249682391131,
+        "acuracia_validacao": 0.9116049382716049
+      },
+      {
+        "epoca": 7,
+        "perda_treino": 0.4914380372264398,
+        "acuracia_validacao": 0.9446913580246914
+      },
+      {
+        "epoca": 8,
+        "perda_treino": 0.4688441602578239,
+        "acuracia_validacao": 0.9469135802469136
+      }
+    ]
+  },
+  "resnet18_transfer": {
+    "acuracia_teste": 0.9804938271604938,
+    "f1_macro_teste": 0.9799322251675626,
+    "acuracia_validacao": 0.9777777777777777,
+    "parametros": 11181642,
+    "tempo_s": 918.444596529007,
+    "historico": [
+      {
+        "epoca": 1,
+        "perda_treino": 0.7183277328430661,
+        "acuracia_validacao": 0.8928395061728395
+      },
+      {
+        "epoca": 2,
+        "perda_treino": 0.4483335681882485,
+        "acuracia_validacao": 0.937283950617284
+      },
+      {
+        "epoca": 3,
+        "perda_treino": 0.3795378476980502,
+        "acuracia_validacao": 0.9733333333333334
+      },
+      {
+        "epoca": 4,
+        "perda_treino": 0.33935791788908537,
+        "acuracia_validacao": 0.9777777777777777
+      }
+    ]
+  },
+  "modelo_escolhido": "resnet18_transfer",
+  "relatorio_por_classe": {
+    "Lavoura temporária": {
+      "precision": 0.9646799116997793,
+      "recall": 0.9711111111111111,
+      "f1-score": 0.9678848283499446,
+      "support": 450.0
+    },
+    "Floresta": {
+      "precision": 0.9933628318584071,
+      "recall": 0.9977777777777778,
+      "f1-score": 0.9955654101995566,
+      "support": 450.0
+    },
+    "Vegetação herbácea": {
+      "precision": 0.9649890590809628,
+      "recall": 0.98,
+      "f1-score": 0.9724366041896362,
+      "support": 450.0
+    },
+    "Rodovia": {
+      "precision": 0.9841269841269841,
+      "recall": 0.992,
+      "f1-score": 0.9880478087649402,
+      "support": 375.0
+    },
+    "Industrial": {
+      "precision": 0.9789473684210527,
+      "recall": 0.992,
+      "f1-score": 0.9854304635761589,
+      "support": 375.0
+    },
+    "Pastagem": {
+      "precision": 0.9668874172185431,
+      "recall": 0.9733333333333334,
+      "f1-score": 0.9700996677740864,
+      "support": 300.0
+    },
+    "Cultura permanente": {
+      "precision": 0.9722222222222222,
+      "recall": 0.9333333333333333,
+      "f1-score": 0.9523809523809523,
+      "support": 375.0
+    },
+    "Residencial": {
+      "precision": 0.9910514541387024,
+      "recall": 0.9844444444444445,
+      "f1-score": 0.987736900780379,
+      "support": 450.0
+    },
+    "Rio": {
+      "precision": 0.9866310160427807,
+      "recall": 0.984,
+      "f1-score": 0.9853137516688919,
+      "support": 375.0
+    },
+    "Lago/mar": {
+      "precision": 0.9977628635346756,
+      "recall": 0.9911111111111112,
+      "f1-score": 0.9944258639910813,
+      "support": 450.0
+    },
+    "accuracy": 0.9804938271604938,
+    "macro avg": {
+      "precision": 0.980066112834411,
+      "recall": 0.9799111111111112,
+      "f1-score": 0.9799322251675626,
+      "support": 4050.0
+    },
+    "weighted avg": {
+      "precision": 0.9805234137928618,
+      "recall": 0.9804938271604938,
+      "f1-score": 0.9804548370021231,
+      "support": 4050.0
+    }
+  },
+  "matriz_confusao": [
+    [
+      437,
+      0,
+      0,
+      1,
+      0,
+      4,
+      7,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      449,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      441,
+      1,
+      0,
+      4,
+      3,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      372,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      372,
+      0,
+      0,
+      3,
+      0,
+      0
+    ],
+    [
+      5,
+      0,
+      2,
+      0,
+      0,
+      292,
+      0,
+      0,
+      1,
+      0
+    ],
+    [
+      9,
+      1,
+      9,
+      1,
+      2,
+      1,
+      350,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      2,
+      0,
+      5,
+      0,
+      0,
+      443,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      0,
+      0,
+      0,
+      0,
+      369,
+      0
+    ],
+    [
+      2,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      1,
+      446
+    ]
+  ],
+  "classes": [
+    "AnnualCrop",
+    "Forest",
+    "HerbaceousVegetation",
+    "Highway",
+    "Industrial",
+    "Pasture",
+    "PermanentCrop",
+    "Residential",
+    "River",
+    "SeaLake"
+  ],
+  "classes_pt": [
+    "Lavoura temporária",
+    "Floresta",
+    "Vegetação herbácea",
+    "Rodovia",
+    "Industrial",
+    "Pastagem",
+    "Cultura permanente",
+    "Residencial",
+    "Rio",
+    "Lago/mar"
+  ],
+  "acuracia_grupos_construido_vegetacao_agua": 0.9948148148148148,
+  "aplicacao_santa_maria": {
+    "cena": {
+      "id": "S2B_MSIL2A_20250203T133839_R124_T22JBN_20250203T184800",
+      "data": "2025-02-03",
+      "nuvens_%": 0.000741
+    },
+    "validacao_setores": {
+      "construida_x_ndvi": -0.7093089699349411,
+      "construida_x_lst": 0.7237715209664037,
+      "spearman_construida_x_lst": 0.48690616276823173
+    },
+    "n_setores": 406
+  }
+}

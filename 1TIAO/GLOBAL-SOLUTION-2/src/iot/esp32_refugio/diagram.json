@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "author": "Grupo Refúgio - FIAP GS 2026.2",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -105.3, "left": 196.2, "attrs": { "temperature": "31", "humidity": "55" } },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -217.6, "left": -158.4, "attrs": { "pins": "i2c" } },
+    { "type": "wokwi-led", "id": "led_verde", "top": 34.8, "left": 253.4, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "led_amarelo", "top": 34.8, "left": 291.8, "attrs": { "color": "yellow" } },
+    { "type": "wokwi-led", "id": "led_vermelho", "top": 34.8, "left": 330.2, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 119.15, "left": 220.8, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r2", "top": 138.35, "left": 259.2, "attrs": { "value": "220" } },
+    { "type": "wokwi-resistor", "id": "r3", "top": 157.55, "left": 297.6, "attrs": { "value": "220" } },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": 175.2, "left": 146.6, "attrs": { "volume": "0.2" } },
+    { "type": "wokwi-pushbutton", "id": "btn_ajuda", "top": 236.6, "left": -134.4, "attrs": { "color": "red", "label": "PEDIR AJUDA" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.2", "black", [] ],
+    [ "dht1:SDA", "esp:15", "green", [] ],
+    [ "lcd1:GND", "esp:GND.1", "black", [] ],
+    [ "lcd1:VCC", "esp:5V", "red", [] ],
+    [ "lcd1:SDA", "esp:21", "blue", [] ],
+    [ "lcd1:SCL", "esp:22", "purple", [] ],
+    [ "esp:25", "r1:1", "green", [] ],
+    [ "r1:2", "led_verde:A", "green", [] ],
+    [ "led_verde:C", "esp:GND.3", "black", [] ],
+    [ "esp:26", "r2:1", "gold", [] ],
+    [ "r2:2", "led_amarelo:A", "gold", [] ],
+    [ "led_amarelo:C", "esp:GND.3", "black", [] ],
+    [ "esp:27", "r3:1", "red", [] ],
+    [ "r3:2", "led_vermelho:A", "red", [] ],
+    [ "led_vermelho:C", "esp:GND.3", "black", [] ],
+    [ "bz1:2", "esp:14", "orange", [] ],
+    [ "bz1:1", "esp:GND.2", "black", [] ],
+    [ "btn_ajuda:1.l", "esp:4", "red", [] ],
+    [ "btn_ajuda:2.l", "esp:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}

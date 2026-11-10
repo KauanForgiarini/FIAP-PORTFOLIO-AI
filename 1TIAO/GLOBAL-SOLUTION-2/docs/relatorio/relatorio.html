@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Refúgio – Global Solution 2026.2</title>
+<style>
+  @page { size: A4; margin: 18mm 17mm 18mm 17mm; }
+  body { font-family: "Segoe UI", Calibri, Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1a1a1a; }
+  h1 { font-size: 20pt; margin: 0 0 4pt; color: #6e2709; }
+  h2 { font-size: 14pt; color: #6e2709; border-bottom: 1.5pt solid #eb6834; padding-bottom: 2pt; margin: 18pt 0 6pt; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin: 12pt 0 4pt; color: #1c5cab; page-break-after: avoid; }
+  p { margin: 4pt 0 6pt; text-align: justify; }
+  table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt; font-size: 9.2pt; page-break-inside: avoid; }
+  th, td { border: 0.6pt solid #c9c8c2; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+  th { background: #f3f1ec; }
+  figure { margin: 8pt 0 12pt; text-align: center; page-break-inside: avoid; }
+  figure img { max-width: 100%; }
+  figcaption { font-size: 8.8pt; color: #52514e; margin-top: 3pt; }
+  pre { font-family: Consolas, "Courier New", monospace; font-size: 8.2pt; background: #f6f6f4; border: 0.6pt solid #dcdbd5; border-radius: 3pt; padding: 6pt 8pt; white-space: pre-wrap; page-break-inside: avoid; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #f3f1ec; padding: 0 2pt; }
+  .capa { height: 245mm; display: flex; flex-direction: column; justify-content: space-between; page-break-after: always; }
+  .capa .topo { color: #52514e; font-size: 11pt; }
+  .capa .titulo { margin-top: 40mm; }
+  .capa .titulo h1 { font-size: 30pt; }
+  .capa .sub { font-size: 14pt; color: #52514e; }
+  .capa .grupo td, .capa .grupo th { font-size: 11pt; padding: 5pt 8pt; }
+  .pendente { background: #fff1c2; padding: 0 3pt; }
+  .destaque { background: #fbeee6; border-left: 3pt solid #eb6834; padding: 6pt 9pt; margin: 8pt 0; page-break-inside: avoid; }
+  .quebra { page-break-before: always; }
+  ul { margin: 3pt 0 6pt 16pt; padding: 0; } li { margin: 2pt 0; }
+</style>
+</head>
+<body>
+
+<!-- ============================ CAPA ============================ -->
+<section class="capa">
+  <div class="topo">FIAP – Faculdade de Informática e Administração Paulista<br>Graduação em Inteligência Artificial · Fase 7 · Global Solution 2026.2 – <b>CitizenTech</b></div>
+  <div class="titulo">
+    <h1>Refúgio</h1>
+    <div class="sub">Inteligência Artificial contra o calor extremo para as pessoas idosas de Santa Maria/RS</div>
+  </div>
+  <table class="grupo">
+    <tr><th>Grupo</th><td><span class="pendente">[NOME DO GRUPO]</span></td></tr>
+    <tr><th>Turma</th><td><span class="pendente">[TURMA]</span></td></tr>
+    <tr><th>Integrantes</th><td>Kauan Maciel Forgiarini – RM 574005<br>Wagner Adriano de Souza Silva Junior – RM 569431</td></tr>
+    <tr><th>Tutor(a)</th><td><span class="pendente">[NOME DO TUTOR]</span></td></tr>
+    <tr><th>Data</th><td>Novembro de 2026</td></tr>
+  </table>
+</section>
+
+<!-- ============================ 1. INTRODUÇÃO ============================ -->
+<h2>1. Introdução</h2>
+<h3>1.1 O problema</h3>
+<p>O Rio Grande do Sul é o estado mais envelhecido do Brasil: 14,1% da população tem 65 anos ou mais (IBGE, Censo 2022). Santa Maria, no centro do estado, registrou mais de 40 °C nos verões de 2020, 2022 e 2025. O calor extremo é especialmente perigoso para pessoas idosas, que sentem menos sede, regulam pior a temperatura do corpo e têm mais doenças cardiovasculares, respiratórias e renais. O risco não é igual em toda a cidade: bairros com menos árvores e mais asfalto formam <b>ilhas de calor urbanas</b>, fenômeno já documentado em Santa Maria por pesquisadores da UFSM.</p>
+<p>Antes de propor a solução, medimos o problema com dados públicos reais:</p>
+<table>
+<tr><th>Pergunta</th><th>Evidência obtida pelo grupo</th><th>Fonte</th></tr>
+<tr><td>O calor extremo está aumentando?</td><td>Dias com máxima ≥ 35 °C: média de 2,8/ano (1991–2000) → 8,8/ano (2016–2025). Máxima de verão +0,53 °C por década.</td><td>ERA5 corrigido pela estação 83936</td></tr>
+<tr><td>O calor faz mal aos idosos daqui?</td><td>Óbitos de pessoas 60+ <b>14% acima do esperado</b> nos dias ≥ 35 °C (IC95% +4% a +24%; 49 óbitos além do esperado, 2020–2024), com efeito dose-resposta. Internações não aumentaram.</td><td>DATASUS (SIM, SIH)</td></tr>
+<tr><td>A cidade esquenta por igual?</td><td>Não: a temperatura de superfície no verão varia ~9 °C entre bairros (32,8 °C a 42,1 °C) e acompanha a falta de vegetação (r = −0,78).</td><td>Landsat 8/9, 19 cenas</td></tr>
+<tr><td>Onde estão os idosos em risco?</td><td>15.417 dos 49.203 idosos urbanos (31%) vivem em setores de prioridade alta ou muito alta.</td><td>Censo 2022 + modelos</td></tr>
+<tr><td>Há onde se refrescar?</td><td>89% dos idosos têm um local climatizado aberto a até 800 m num dia útil às 14h, mas <b>só 45% no domingo</b>.</td><td>OpenStreetMap + recomendador</td></tr>
+</table>
+
+<h3>1.2 Público beneficiado e atores do ecossistema</h3>
+<ul>
+<li><b>Pessoas idosas</b> (60+) da área urbana de Santa Maria, prioritariamente as que vivem em setores quentes e pouco arborizados, moram sozinhas ou não leem.</li>
+<li><b>Quem cuida:</b> familiares, cuidadores, vizinhos, agentes comunitários de saúde e ILPIs, que recebem os alertas por mensagem ou <b>ligação de voz</b>.</li>
+<li><b>Poder público:</b> Prefeitura (Saúde, Meio Ambiente, Defesa Civil), que recebe o mapa de prioridades para arborização e para abrir refúgios climáticos aos domingos.</li>
+<li><b>Parceiros para ampliar o impacto:</b> UFSM (validação em campo), Estratégia Saúde da Família, CRAS, bibliotecas e shoppings (refúgios), operadoras de telefonia (envio em massa).</li>
+</ul>
+
+<h3>1.3 Objetivo</h3>
+<p>Identificar <b>onde</b> o calor é mais perigoso para as pessoas idosas de Santa Maria e <b>avisar a tempo</b> quem pode protegê-las, recomendando ações concretas: o refúgio climático aberto e adequado mais próximo, cuidados baseados em orientações oficiais e prioridades de plantio de árvores.</p>
+
+<!-- ============================ 2. DESENVOLVIMENTO ============================ -->
+<h2 class="quebra">2. Desenvolvimento</h2>
+<h3>2.1 Arquitetura da solução</h3>
+<table>
+<tr><th>Camada</th><th>Componentes</th><th>Disciplinas aplicadas</th></tr>
+<tr><td>Dados</td><td>Landsat 8/9, Sentinel-2, IBGE Censo 2022, estação 83936 + ERA5, DATASUS SIM/SIH, OpenStreetMap, EuroSAT</td><td>Python, análise exploratória</td></tr>
+<tr><td>Inteligência</td><td>Análise calor × saúde; CNN de uso do solo; índice de risco + K-Means; dois sistemas de recomendação; assistente de IA generativa com ferramentas e RAG</td><td>Estatística, redes neurais, visão computacional, ML, recomendação, IA generativa/agentes</td></tr>
+<tr><td>Campo (IoT)</td><td>ESP32 + DHT22 + LCD + LEDs + buzzer + botão "pedir ajuda" (Wokwi); MQTT sobre TLS com HMAC</td><td>Sensores e conectividade</td></tr>
+<tr><td>Dados operacionais</td><td>SQLite / Oracle (13 tabelas, visão, 7 consultas); Amazon DynamoDB (leituras)</td><td>Banco de dados SQL e NoSQL</td></tr>
+<tr><td>Nuvem</td><td>Amazon DynamoDB, Amazon SNS (envio de alertas), Amazon Bedrock (preparado)</td><td>Computação em nuvem</td></tr>
+<tr><td>Interface</td><td>Painel Streamlit: mapa, indicadores, refúgio, alertas, chat, sensores</td><td>Aplicações interativas</td></tr>
+<tr><td>Transversal</td><td>LGPD, TLS, HMAC, anti-replay, defesas OWASP Top 10 para LLM</td><td>Cibersegurança</td></tr>
+</table>
+
+<h3>2.2 Origem, tratamento e qualidade dos dados</h3>
+<table>
+<tr><th>Fonte</th><th>Uso</th><th>Tratamento</th><th>Limitações</th></tr>
+<tr><td>Landsat 8/9 C2 L2 (USGS, via Planetary Computer)</td><td>Temperatura de superfície e NDVI</td><td>Cenas de dez–mar com &lt;10% de nuvens, máscara QA_PIXEL, conversão para °C e refletância, mediana de 19 cenas</td><td>Mede a superfície às ~10h30, não o ar</td></tr>
+<tr><td>IBGE Censo 2022 por setor</td><td>Idosos, alfabetização, densidade</td><td>406 setores urbanos do distrito-sede</td><td>Sigilo em setores pequenos (imputação só para o índice)</td></tr>
+<tr><td>Estação 83936 (Meteostat) + ERA5 (Open-Meteo)</td><td>Dias e ondas de calor</td><td>Correção de viés (+0,34 °C; r = 0,983); limiar p90 = 33,3 °C</td><td>ERA5 suaviza picos; Meteostat pode subestimar máximas</td></tr>
+<tr><td>DATASUS SIM/SIH (RS)</td><td>Óbitos e internações de idosos</td><td>Leitor de .dbc próprio em Python; só contagens diárias agregadas</td><td>2024/2025 ainda podem ser revisados</td></tr>
+<tr><td>OpenStreetMap</td><td>180 refúgios candidatos, 3 ILPIs</td><td>Categorização; horários típicos por categoria</td><td>Mapeamento colaborativo incompleto</td></tr>
+<tr><td>EuroSAT RGB</td><td>Treino da CNN</td><td>27.000 imagens, divisão estratificada 70/15/15</td><td>Imagens europeias (diferença de domínio)</td></tr>
+</table>
+<p><b>Dados simulados, identificados como tal:</b> leituras do ESP32 no Wokwi e o cadastro de 300 pessoas idosas e cuidadores, com nomes fictícios e telefones mascarados, distribuídos conforme o Censo.</p>
+
+<h3>2.3 Calor × saúde (estatística)</h3>
+<p>Desenho estratificado no tempo: o número esperado de óbitos em cada dia é a média dos dias do mesmo mês/ano e do mesmo dia da semana, o que controla sazonalidade, tendência e efeito de fim de semana. A razão observado/esperado nos dias quentes estima o excesso de risco, e o IC95% vem de um bootstrap.</p>
+<pre># src/analise/calor_saude.py (trecho)
+d["estrato"] = d.data.dt.to_period("M").astype(str) + "-" + d.data.dt.day_of_week.astype(str)
+d["esperado"] = d.groupby("estrato")[desfecho].transform("mean")
+quente = d[d[marcador]]                               # dias com Tmax >= 35 °C
+obs, esp = quente[desfecho].to_numpy(), quente["esperado"].to_numpy()
+rr = obs.sum() / esp.sum()                             # razão de taxas
+idx = rng.integers(0, len(obs), size=(n_boot, len(obs)))
+boot = obs[idx].sum(axis=1) / esp[idx].sum(axis=1)     # bootstrap -> IC95%</pre>
+<figure><img src="../img/calor_saude_idosos.png"><figcaption>Figura 1 – Dias de calor extremo e saúde dos idosos em Santa Maria (dados reais).</figcaption></figure>
+
+<h3>2.4 Visão computacional: CNN de uso do solo</h3>
+<p>O NDVI mede vegetação, mas não distingue um telhado de um campo seco. Treinamos uma CNN para reconhecer padrões espaciais (quadras, ruas, telhados) e estimar a <b>área construída</b> de cada setor. Comparamos três abordagens e escolhemos o modelo pela validação, avaliando o teste uma única vez.</p>
+<table>
+<tr><th>Modelo</th><th>Acurácia (teste)</th><th>F1-macro</th><th>Tempo de treino (CPU)</th></tr>
+<tr><td>Random Forest com histogramas de cor (baseline)</td><td>81,9%</td><td>0,809</td><td>34 s</td></tr>
+<tr><td>CNN pequena treinada do zero (289 mil parâmetros)</td><td>95,4%</td><td>0,953</td><td>28 min</td></tr>
+<tr><td><b>ResNet-18 com transfer learning (escolhida)</b></td><td><b>98,0%</b></td><td><b>0,980</b></td><td>15 min</td></tr>
+</table>
+<pre># src/ml/cnn_eurosat.py (trecho) – aumento de dados e escolha pela validação
+def aumentar(x):                       # satélite não tem "lado de cima"
+    if torch.rand(1) &lt; 0.5: x = x.flip(3)
+    if torch.rand(1) &lt; 0.5: x = x.flip(2)
+    return torch.rot90(x, int(torch.randint(0, 4, (1,))), dims=(2, 3))
+
+nome_final = max(("cnn_pequena", "resnet18_transfer"),
+                 key=lambda k: resultados[k]["acuracia_validacao"])</pre>
+<p>A rede foi aplicada a uma imagem Sentinel-2 real de Santa Maria (03/02/2025) com janela deslizante (64×64 px, passo de 16 px). Na <b>validação externa</b>, sem rótulos locais, a fração construída estimada teve correlação de <b>+0,72 com a temperatura de superfície</b> e de <b>−0,71 com o NDVI</b>, medidas que a rede nunca viu.</p>
+<figure><img src="../img/cnn_santa_maria.png" style="max-width:92%"><figcaption>Figura 2 – Imagem Sentinel-2 e probabilidade de área construída estimada pela CNN.</figcaption></figure>
+
+<h3>2.5 Índice de risco e clusterização</h3>
+<p>Seguindo o referencial de risco climático do IPCC, o índice combina, por média geométrica: <b>perigo</b> (temperatura de superfície, área construída da CNN), <b>exposição</b> (número de idosos, % de 70+) e <b>vulnerabilidade</b> (pouca vegetação, idosos não alfabetizados, distância ao refúgio). O K-Means, com k escolhido pela silhueta (k = 3), descreve os perfis. O mais crítico, "Quente, envelhecido, pouco verde", reúne 201 setores e 28.740 idosos.</p>
+<figure><img src="../img/mapa_risco_refugios.png"><figcaption>Figura 3 – Prioridade de ação por setor e distância até um refúgio climatizado aberto no domingo às 14h.</figcaption></figure>
+
+<h3>2.6 Sistemas de recomendação</h3>
+<p><b>Para o cidadão:</b> recomendação personalizada de refúgio climático, filtrada pelo que está aberto no dia e na hora, e pontuada por proximidade (decai com a distância que a pessoa consegue andar), adequação à necessidade (ar-condicionado, sombra ou atendimento) e frescor do entorno.</p>
+<pre># src/ml/recomendacao.py (trecho)
+r = r[r["aberto_agora"] &amp; (r["distancia_m"] &lt;= 3 * perfil.mobilidade_m)]
+r["s_proximidade"] = np.exp(-r["distancia_m"] / perfil.mobilidade_m)
+r["s_adequacao"]   = r["categoria"].map(ADEQUACAO[perfil.necessidade])
+r["s_frescor"]     = (1 - (r["lst_local"] - lst.min()) / (lst.max() - lst.min())).clip(0, 1)
+r["pontuacao"]     = 0.45*r.s_proximidade + 0.35*r.s_adequacao + 0.20*r.s_frescor</pre>
+<p><b>Avaliação:</b> o baseline ingênuo ("o ponto mais próximo") mandaria 49,7% dos idosos a um local fechado ou inadequado num dia útil, e 93,2% no domingo. <b>Para o gestor:</b> a relação observada entre NDVI e temperatura (−1,33 °C a cada +0,1 de NDVI; R² = 0,61) estima o resfriamento possível em cada setor, ponderado pelo número de idosos. Os 20 setores recomendados capturam <b>27% mais benefício</b> do que o melhor critério simples ("mais idosos"), e o ranking se mantém estável quando as premissas variam (Kendall τ ≥ 0,64).</p>
+
+<h3>2.7 Assistente de alertas com IA generativa</h3>
+<p>O <b>nível</b> do alerta é decidido por uma regra transparente e testada, não pela IA. Isso torna a decisão auditável e garante que o alerta saia mesmo sem IA:</p>
+<pre># src/agente/alerta.py (trecho)
+def definir_nivel(tmax_prevista, pessoa, sos=False):
+    if sos: return "emergencia"                          # botão PEDIR AJUDA do ESP32
+    alto_risco = pessoa.get("prioridade") in ("Alta", "Muito alta")
+    vulneravel = bool(pessoa.get("mora_sozinha")) or (2026 - pessoa["ano_nascimento"]) &gt;= 80
+    if tmax_prevista &gt;= 38 or (tmax_prevista &gt;= 35 and alto_risco and vulneravel): return "emergencia"
+    if tmax_prevista &gt;= 35 or (tmax_prevista &gt;= LIMIAR_P90 and (alto_risco or vulneravel)): return "alerta"
+    if tmax_prevista &gt;= LIMIAR_P90: return "atencao"
+    return None</pre>
+<p>Um modelo Claude (via Amazon Bedrock) redige a mensagem: texto para WhatsApp/SMS ou <b>roteiro de ligação de voz</b> para quem não lê, em saída estruturada (JSON). No chat, um agente decide quais ferramentas usar (previsão do tempo, risco do bairro, refúgio aberto, orientações oficiais do Ministério da Saúde recuperadas por RAG). Toda saída passa por validação: 192 obrigatório em emergência, refúgio citado, sem dados pessoais e sem links. <b>Limitação:</b> a conta AWS Academy bloqueia o Bedrock para todos os modelos (testado em 08/11/2026). Por isso, a demonstração usa a <b>mensagem de modelo fixo</b>, que passa na mesma validação, enquanto o código para o Bedrock fica pronto para uma conta AWS comum.</p>
+
+<h3>2.8 IoT, nuvem, banco de dados e segurança</h3>
+<p>O ESP32 (simulado no Wokwi) calcula a sensação térmica (índice de calor da NOAA) no próprio dispositivo, sinaliza o nível com LEDs, display e buzzer e tem um botão "pedir ajuda". Ele publica via MQTT sobre TLS, verificando o certificado do servidor (Amazon Root CA 1). Como o broker de demonstração é público, cada mensagem é assinada com HMAC-SHA256 e tem número de sequência crescente (anti-replay):</p>
+<pre>// src/iot/esp32_refugio/sketch.ino (trecho)
+snprintf(canonico, sizeof(canonico), "%s|%lu|%s|%s|%s|%s|%d",
+         SENSOR_ID, (unsigned long)seq, st.c_str(), su.c_str(), sic.c_str(), nivel, sos ? 1 : 0);
+doc["sig"] = hmacSha256(HMAC_SEGREDO, canonico);   // a ponte rejeita mensagens forjadas
+tls.setCACert(AMAZON_ROOT_CA1);                    // valida o servidor (sem setInsecure)</pre>
+<p>A ponte MQTT valida assinatura, sensor autorizado, sequência e faixas físicas, depois grava no <b>SQLite</b> e no <b>Amazon DynamoDB</b>. Os alertas são publicados no <b>Amazon SNS</b>. O modelo relacional tem 13 tabelas com restrições <code>CHECK</code>, chaves estrangeiras, índices, uma visão de risco por bairro, um script equivalente em Oracle e 7 consultas de negócio. Princípios de LGPD aplicados: minimização, dados de saúde só agregados, cadastro simulado com consentimento registrado, telefones mascarados e segredos fora do código (<code>.env</code>, <code>secrets.h</code>).</p>
+
+<!-- ============================ 3. RESULTADOS ============================ -->
+<h2 class="quebra">3. Resultados obtidos</h2>
+<h3>3.1 Evidências de testes</h3>
+<table>
+<tr><th>Teste</th><th>Resultado</th></tr>
+<tr><td>Suíte automatizada (<code>python -m pytest</code>)</td><td><b>43 de 43 testes aprovados</b>: análises, leitor DATASUS, recomendação, índice de risco, CNN, segurança IoT, assistente e painel</td></tr>
+<tr><td>Ponta a ponta na AWS (08/11/2026)</td><td>6 leituras do sensor gravadas no DynamoDB; alerta de emergência publicado no SNS ("enviado")</td></tr>
+<tr><td>Segurança do canal MQTT</td><td>Mensagem adulterada após a assinatura → rejeitada ("assinatura inválida"); mensagem reenviada → rejeitada ("replay")</td></tr>
+<tr><td>Segurança do assistente</td><td>5 de 5 tentativas de prompt injection detectadas; telefone, CPF e e-mail mascarados; 192 presente em toda emergência</td></tr>
+<tr><td>RAG das orientações oficiais</td><td>5 de 5 perguntas de teste recuperaram o tema correto</td></tr>
+<tr><td>Firmware ESP32</td><td>Compilado com sucesso no Wokwi. <span class="pendente">[Inserir print/registro do teste em tempo real feito pelo grupo]</span></td></tr>
+<tr><td>Painel Streamlit</td><td>Carrega sem erros; gera alerta e responde emergência com 192 (teste automatizado)</td></tr>
+</table>
+
+<h3>3.2 Principais resultados</h3>
+<figure><img src="../img/mapa_lst_santa_maria.png" style="max-width:85%"><figcaption>Figura 4 – Ilhas de calor de Santa Maria: temperatura de superfície no verão (Landsat, 30 m).</figcaption></figure>
+<figure><img src="../img/dias_35C_por_ano.png" style="max-width:85%"><figcaption>Figura 5 – Dias com máxima ≥ 35 °C por ano (1991–2025).</figcaption></figure>
+<figure><img src="../img/cnn_comparacao_modelos.png"><figcaption>Figura 6 – Comparação dos modelos de visão computacional e matriz de confusão da ResNet-18.</figcaption></figure>
+
+<h3>3.3 ODS e medição de impacto</h3>
+<table>
+<tr><th>ODS</th><th>Contribuição</th><th>Indicador e linha de base</th></tr>
+<tr><td>3 – Saúde e Bem-Estar</td><td>Alerta preventivo a quem cuida do idoso</td><td>Excesso de óbitos de idosos em dias ≥ 35 °C (base: +14%), remedido a cada verão com o mesmo método</td></tr>
+<tr><td>11 – Cidades e Comunidades Sustentáveis</td><td>Priorização de plantio e de refúgios</td><td>% de idosos com refúgio climatizado aberto a ≤ 800 m no domingo (base: 45%); NDVI dos setores prioritários</td></tr>
+<tr><td>13 – Ação Contra a Mudança do Clima</td><td>Adaptação a ondas de calor</td><td>Alertas entregues por onda de calor; tempo entre a previsão e o aviso</td></tr>
+</table>
+
+<h3>3.4 Limitações</h3>
+<ul>
+<li>Análise de saúde ecológica (populacional), sem controle de poluição; o bootstrap ignora a autocorrelação entre dias de uma mesma onda.</li>
+<li>Temperatura de superfície não é temperatura do ar; o EuroSAT tem diferença de domínio em relação a Santa Maria.</li>
+<li>Os pesos do índice de risco são escolha do grupo (mitigado com a análise de estabilidade); a climatização e os horários dos refúgios são premissas por categoria.</li>
+<li>O Bedrock está bloqueado na conta AWS Academy; o sensor é simulado; o broker MQTT de demonstração é público (em produção: AWS IoT Core com certificado X.509 por dispositivo).</li>
+</ul>
+
+<!-- ============================ 4. CONCLUSÕES ============================ -->
+<h2>4. Conclusões</h2>
+<p>Com dados públicos e reais, o Refúgio mostrou que o calor extremo em Santa Maria é crescente, está associado a mais mortes de pessoas idosas e se concentra em bairros pouco arborizados onde vivem muitos idosos. A solução integra visão computacional, machine learning, sistemas de recomendação, IA generativa, IoT, nuvem, banco de dados e cibersegurança em um fluxo único: <b>mapear o risco → recomendar onde se proteger e onde plantar → avisar quem cuida, na linguagem e no canal certos</b>. A decisão crítica (o nível do alerta) é transparente e não depende da IA, e todos os resultados apresentados como funcionais foram testados.</p>
+<p>Próximos passos: validar o mapa com medições de campo em parceria com a UFSM; piloto com a Estratégia Saúde da Família em um bairro de prioridade muito alta; ampliar para alertas de <b>frio extremo</b>, também crítico para idosos no inverno gaúcho; e migrar o broker para AWS IoT Core com certificados por dispositivo.</p>
+
+<h2>Links da entrega</h2>
+<table>
+<tr><th>Vídeo de demonstração (YouTube, não listado)</th><td><span class="pendente">[LINK DO VÍDEO]</span></td></tr>
+<tr><th>Repositório GitHub (privado, compartilhado com <code>fiap-tutoria</code>)</th><td><span class="pendente">[LINK DO REPOSITÓRIO]</span></td></tr>
+<tr><th>Projeto no Wokwi</th><td><span class="pendente">[LINK DO WOKWI]</span></td></tr>
+</table>
+<p style="font-size:8.8pt;color:#52514e">Referências: IBGE – Censo Demográfico 2022; USGS Landsat Collection 2; ESA Copernicus Sentinel-2; ECMWF ERA5 (Open-Meteo); Meteostat (estação 83936); Ministério da Saúde – DATASUS (SIM, SIH) e página "Calor"; Helber et al. (2019), EuroSAT; IPCC AR6 – referencial de risco; NOAA/NWS – índice de calor; OWASP Top 10 for LLM Applications; estudos da UFSM sobre ilhas de calor em Santa Maria (Saydelles, 2005; Costa, 2009; Rovani et al., 2010; Trindade et al., 2017; Grigoletti et al., 2018).</p>
+</body>
+</html>
